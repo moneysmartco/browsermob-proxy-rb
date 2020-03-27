@@ -203,11 +203,11 @@ module BrowserMob
       end
 
       def request_interceptor=(data)
-        @resource['interceptor/request'].post data, :content_type => "text/plain"
+        @resource['filter/request'].post data, :content_type => "text/plain"
       end
 
       def response_interceptor=(data)
-        @resource['interceptor/response'].post data, :content_type => "text/plain"
+        @resource['filter/response'].post data, :content_type => "text/plain"
       end
     end # Client
 
